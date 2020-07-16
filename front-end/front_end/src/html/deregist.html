@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css_js/regist/css/style.css">
+    <link rel="stylesheet" href="../css_js/doc/tabpagecss/bootstrap.css" type="text/css">
+
+    <!-- JS -->
+    <script src="../css_js/regist/js/jquery.min.js"></script>
+    <script src="../css_js/regist/js/main.js"></script>
+    <script src="../css_js/doc/tabpagecss/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="main">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+
+                <form method="POST" class="register-form" id="register-form">
+                    <h7>患者病历号查询：</h7>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名 :</label>
+                            <input type="text" name="name" id="name" required/>
+                        </div>
+                        <div class="form-group">
+                            <br><br><button id="check">查询</button>
+                        </div>
+                    </div><br>
+
+                    <h7>患者信息确认</h7>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nameConfirm">姓名 :</label>
+                            <input type="text" name="nameConfirm" id="nameConfirm"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="idNumConfirm">身份证号 :</label>
+                            <input type="text" name="idNumConfirm" id="idNumConfirm"/>
+                        </div>
+                    </div><br>
+
+                    <h7>患者挂号信息</h7>
+                    <div class="ibox-content" style="margin-left: 20px">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="prescDetail">
+                                <thead>
+                                <tr>
+                                    <th>病历号</th>
+                                    <th>姓名</th>
+                                    <th>挂号日期</th>
+                                    <th>挂号午别</th>
+                                    <th>看诊科室</th>
+                                    <th>看诊状态</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <td>111</td>
+                                <td>李白</td>
+                                <td>2020/7/16</td>
+                                <td>上</td>
+                                <td>心血管内科</td>
+                                <td>已挂号</td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <input type="submit" value="退号" class="submit" name="submit" id="submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

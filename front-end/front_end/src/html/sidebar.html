@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css_js/sidebar/css/style.css">
+</head>
+<body>
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3 style="color: white">东软HIS</h3>
+        </div>
+        <br><br>
+
+        <ul class="list-unstyled components">
+            <h6 style="color: white">超级管理员：admin</h6><br>
+            <li class="active">
+                <a href="#regSubmenu" data-toggle="collapse" aria-expanded="false">挂号收费</a>
+                <ul class="collapse list-unstyled" id="regSubmenu">
+                    <li><a href="#" id="reg">现场挂号</a></li>
+                    <li><a href="#" id="dereg">退号</a></li>
+                    <li><a href="#" id="charge">收费</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#diagSunmenu" data-toggle="collapse" aria-expanded="false">门诊医生</a>
+                <ul class="collapse list-unstyled" id="diagSunmenu">
+                    <li><a href="#" id="doc">门诊病历</a></li>
+                    <li><a href="#" id="doc_drug">医生开药</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pharmacySubmenu" data-toggle="collapse" aria-expanded="false">药房管理</a>
+                <ul class="collapse list-unstyled" id="pharmacySubmenu">
+                    <li><a href="#" id="deliver">发药</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5"></div>
+
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="../css_js/sidebar/js/popper.js"></script>
+<script src="../css_js/sidebar/js/bootstrap.min.js"></script>
+<script src="../css_js/sidebar/js/main.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#reg").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "regist.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#doc").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "doc.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#doc_drug").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "doc_drug.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#charge").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "charge.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#dereg").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "deregist.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+
+    $(document).ready(function () {
+        $("#deliver").click(function () {
+            $.ajax({
+                dataType: "html",
+                url: "deliverDrug.html",
+                type: "GET",
+                success: function (msg) {
+                    $('#content').html(msg);
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>

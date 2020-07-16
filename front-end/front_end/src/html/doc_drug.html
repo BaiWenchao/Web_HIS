@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../css_js/doc/tabpagecss/bootstrap.js"></script>
+    <link rel="stylesheet" href="../css_js/doc/tabpagecss/bootstrap.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css_js/doc/tablecss/util.css">
+    <link rel="stylesheet" type="text/css" href="../css_js/doc/tablecss/main.css">
+    <link rel="stylesheet" href="../css_js/regist/css/style.css">
+</head>
+<body>
+
+<div class="row">
+    <div class="ibox-content" style="margin-left: 30px">
+        <h7>未诊患者：</h7>
+        <div class="table-responsive">
+            <table class="table table-hover" id="patientNotDiagnose">
+                <thead>
+                <tr>
+                    <th>挂号ID</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>111</td>
+                <td>李白</td>
+                <td>男</td>
+                <td>30</td>
+                </tbody>
+            </table>
+        </div><br>
+        <h7>已诊患者：</h7>
+        <div class="table-responsive">
+            <table class="table table-hover" id="patientDiagnose">
+                <thead>
+                <tr>
+                    <th>挂号ID</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>110</td>
+                <td>李清照</td>
+                <td>女</td>
+                <td>29</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ibox-content" style="margin-left: 50px">
+        <h7>药品预览：</h7>
+        <div class="table-responsive">
+            <table class="table table-hover" id="drugList">
+                <thead>
+                <tr>
+                    <th>药品名称</th>
+                    <th>规格</th>
+                    <th>单价</th>
+                    <th>用法</th>
+                    <th>用量</th>
+                    <th>频次</th>
+                    <th>数量</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>头孢拉定</td>
+                <td>盒</td>
+                <td>12</td>
+                <td>一天两次</td>
+                <td>每次两粒</td>
+                <td>11</td>
+                <td>2</td>
+                </tbody>
+            </table>
+        </div><br>
+
+
+
+        <div class="row">
+            <div class="ibox-content" style="margin-left: 20px">
+                <h7>处方预览：</h7>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="prescList">
+                        <thead>
+                        <tr>
+                            <th>处方名称</th>
+                            <th>使用范围</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <td>感冒</td>
+                        <td>全院</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ibox-content" style="margin-left: 20px">
+                <h7>处方预览：</h7>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="prescDetail">
+                        <thead>
+                        <tr>
+                            <th>药品名称</th>
+                            <th>规格</th>
+                            <th>单价</th>
+                            <th>用法</th>
+                            <th>用量</th>
+                            <th>频次</th>
+                            <th>数量</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <td>头孢拉定</td>
+                        <td>盒</td>
+                        <td>12</td>
+                        <td>一天两次</td>
+                        <td>每次两粒</td>
+                        <td>11</td>
+                        <td>2</td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-submit">
+            <input type="submit" value="添加处方" class="submit" name="add" id="add" />
+            <input type="submit" value="删除处方" class="submit" name="delete" id="delete" />
+            <input type="submit" value="提交表单" class="submit" name="submit" id="submit" />
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
