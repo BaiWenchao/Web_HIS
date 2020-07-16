@@ -1,15 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2a6ff5c-a276-4663-81b0-1ef3c45f542a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/dao/ConstantItemMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/dao/RegLevelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/dao/UserCategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/dao/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/entity/ConstantItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/entity/RegLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/entity/UserCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/java/servlet/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-mapping/ConstantItemMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-mapping/RegLevelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-mapping/UserCategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-mapping/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/doctor.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/pharmacy.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/registrar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/test/java/dao/ConstantItemMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/test/java/dao/RegLevelMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/test/java/dao/UserCateMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HISProject/src/test/java/dao/UserMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/.idea/artifacts/front_end_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/front-end.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/data/document.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/data/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/files/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/files/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/images/needbook_u31.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/images/needbook_u31_disabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/images/needbook_u31_selected.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/images/needbook_u31_selectedDisabled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/debug/debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/debug/styles/debug.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/debug/styles/images/console_panel_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/debug/styles/images/console_panel_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/page_notes/page_notes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/page_notes/styles/images/notes_panel_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/page_notes/styles/images/notes_panel_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/page_notes/styles/page_notes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/recordplay/recordplay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/recordplay/styles/recordplay.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/sitemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/back_keys.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/closed_item.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/flow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/folder_closed_blue.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/forward_keys.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/left_arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/open_item.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/page_lt_grey.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/right_arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/search_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/search_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/sitemap_panel_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/images/sitemap_panel_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/plugins/sitemap/styles/sitemap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/Other.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/allow-access.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/axure-chrome-extension.crx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/axure_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/chrome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/details.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/extensions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/firefox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/preview-rp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/safari.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/safari_advanced.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/safari_restrictions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/splitter.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/chrome/splitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/axure_rp_page.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/images.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/newwindow.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/note.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/touch.cur" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/touch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_glass_75_ffffff_1x400.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-bg_inset-soft_95_fef1ec_1x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/jquery-ui-themes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/previewfonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/previewfonts/SourceSansPro-OpenFontLicense.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/previewfonts/SourceSansPro-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/previewfonts/SourceSansPro-Semibold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/expand.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/axure9_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/axure_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/axure_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/caret_down.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/caret_down_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/close_x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/close_x_minimize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/divider.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/divider.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/exit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/favicon_play.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/overflow-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/overflow_checkmark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/overflow_icon_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/refresh.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/resize.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/return.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/transparent.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/images/views-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/reload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/adaptive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/annotation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/axQuery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/axQuery.std.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/doc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/drag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/expr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/flyout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/geometry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/globals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/ie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/init.temp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/ios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/jquery.nicescroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/legacy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/math.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/move.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/recording.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/repeater.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/sto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/utils.temp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/variables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/viewer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axure/visibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/axutils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/jquery-1.7.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/jquery-ui-1.8.10.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/messagecenter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/player/axplayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/player/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/axure/resources/scripts/player/splitter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/css/component/sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/css/page/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/css/page/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/html/component/registrar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/html/page/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/html/page/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/html/page/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/loadRegPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/regist/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/regist/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/regist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/regist/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/src/regist/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front-end/web/sidebar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/HISProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/target/HISProject.war" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/target/HISProject.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/target/HISProject/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/target/HISProject/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/target/HISProject/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/target/HISProject/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/target/HISProject/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/target/HISProject/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HISProject/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HISProject/target/classes/mybatis-config.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\Environments\apache-maven-3.6.3\maven-repo" />
-        <option name="mavenHome" value="D:/Environments/apache-maven-3.6.3" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Environments/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Environments\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1ehxiXluIJHhZsZoNKpy73XxDbX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HISProject" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2a6ff5c-a276-4663-81b0-1ef3c45f542a" name="Default Changelist" comment="" />
+      <created>1594787753300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594787753300</updated>
+      <workItem from="1594787755086" duration="61000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1594787811378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594787811378" />
   </component>
 </project>

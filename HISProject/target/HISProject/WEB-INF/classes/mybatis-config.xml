@@ -12,9 +12,9 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
-    <!--别名-->
+    <!--包说明-->
     <typeAliases>
-        <package name="com.his.entity"/>
+        <package name="entity"/>
     </typeAliases>
 
     <environments default="development">
@@ -29,6 +29,10 @@
         </environment>
     </environments>
     <mappers>
+        <mapper resource="mybatis-mapping/PatientMapper.xml"/>
         <mapper resource="mybatis-mapping/UserMapper.xml"/>
+        <mapper resource="mybatis-mapping/UserCategoryMapper.xml"/>
+        <mapper resource="mybatis-mapping/ConstantItemMapper.xml"/>
+        <mapper resource="mybatis-mapping/RegLevelMapper.xml"/>
     </mappers>
 </configuration>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>缴费</title>
 
     <!-- Main css -->
     <link rel="stylesheet" href="../css_js/regist/css/style.css">
@@ -20,15 +20,15 @@
         <div class="signup-content">
             <div class="signup-form">
 
-                <form method="POST" class="register-form" id="register-form">
+                <form method="POST" class="charge-form" id="charge-form">
                     <h7>患者病历号查询：</h7>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">姓名 :</label>
                             <input type="text" name="name" id="name" required/>
                         </div>
-                        <div class="form-group">
-                            <br><br><button id="check">查询</button>
+                        <div class="form-submit">
+                            <input type="button" value="查询" class="submit" name="check" id="check" />
                         </div>
                     </div><br>
 
@@ -50,7 +50,7 @@
                             <table class="table table-hover" id="prescDetail">
                                 <thead>
                                 <tr>
-                                    <th><input type="checkbox" style="width: 30px"></th>
+                                    <th><input type="checkbox" name="selectAll" style="width: 30px"></th>
                                     <th>病历号</th>
                                     <th>姓名</th>
                                     <th>项目名称</th>
@@ -61,7 +61,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <td><input type="checkbox" style="width: 30px"></td>
+                                <td><input type="checkbox" name="choice" style="width: 30px"></td>
                                 <td>111</td>
                                 <td>李白</td>
                                 <td>头孢</td>
@@ -71,7 +71,7 @@
                                 <td>已开立</td>
                                 </tbody>
                                 <tbody>
-                                <td><input type="checkbox" style="width: 30px"></td>
+                                <td><input type="checkbox" name="choice" style="width: 30px"></td>
                                 <td>112</td>
                                 <td>李清照</td>
                                 <td>头孢</td>
@@ -85,13 +85,49 @@
                     </div>
 
                     <div class="form-submit">
-                        <input type="submit" value="收费结算" class="submit" name="submit" id="submit" />
+                        <input type="button" value="收费结算" class="submit" name="submit" id="submit" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    var
+        form = $('#charge-form'),
+        choices = form.find('[name=choice]'),
+        selectAll = form.find('[name=selectAll]');
+
+    // 重置初始化状态：
+    form.find('*').show().off();
+    form.find(':checkbox').prop('checked', false).off();
+    // 拦截form提交事件
+    form.off().submit(function(e){
+        e.preventDefault();
+        alert(form.serialize());
+    })
+
+    function setAll() {
+        if(selectAll.prop('checked')) {
+            choices.prop('checked', true);
+        } else {
+            choices.prop('checked', false);
+        }
+    }
+
+    selectAll.change(setAll);
+
+</script>
+
+
+<script language="javascript">
+    var add = $('#submit');
+    add.click(function () {
+        window.open ('pop-up/invoice.html', '发票', 'height=500, width=1000, top=300,left=300')
+    })
+</script>
 
 </body>
 </html>

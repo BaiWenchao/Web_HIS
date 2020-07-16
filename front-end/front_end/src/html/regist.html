@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>挂号</title>
     <!-- Main css -->
     <link rel="stylesheet" href="../css_js/regist/css/style.css">
 
@@ -79,7 +79,7 @@
                         </div>
                         <div class="form-group">
                             <label for="date">看诊日期</label>
-                            <input type="date" name="birthday" id="date" required/>
+                            <input type="date" name="date" id="date" required/>
                         </div>
                         <div class="form-group">
                             <label for="regNoon">午别 :</label>
@@ -170,15 +170,57 @@
                         </div>
                     </div>
 
-                    <div class="form-submit">
-                        <input type="submit" value="全部清空" class="submit" name="reset" id="reset" />
-                        <input type="submit" value="提交表单" class="submit" name="submit" id="submit" />
+                    <div class="form-submit" id = "submitForm">
+                        <input type="reset" value="全部清空" class="submit" name="reset" id="reset" />
+                        <input type="button" value="提交表单" class="submit" name="submit" id="submit" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 </div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+<script type="text/javascript">
+    function validform() {
+        return $("#register-form").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                age: {
+                    required: true,
+                    digits: true
+                },
+                birthday: {
+                    required: true
+                },
+                idNum: {
+                    required: true
+                },
+                date: {
+                    required: true
+                }
+            }
+        })
+    }
+</script>
+
+<script>
+    $("#submit").click(function(){
+        console.log(validform().form())
+
+        if(validform().form()) {
+            alert("挂号成功");
+        } else {
+            alert("请完善挂号信息！");
+        }
+    });
+</script>
+
+
+</body>
 </html>

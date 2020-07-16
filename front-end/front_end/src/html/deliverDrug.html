@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>发药</title>
 
     <!-- Main css -->
     <link rel="stylesheet" href="../css_js/regist/css/style.css">
@@ -20,7 +20,7 @@
         <div class="signup-content">
             <div class="signup-form">
 
-                <form method="POST" class="register-form" id="register-form">
+                <form method="POST" class="drug-form" id="drug-form">
                     <h7>待发药品查询：</h7>
                     <div class="form-row">
                         <div class="form-group">
@@ -28,7 +28,9 @@
                             <input type="text" name="id" id="id" required/>
                         </div>
                         <div class="form-group">
-                            <br><br><button id="check">查询</button>
+                            <div class="form-submit">
+                                <input type="button" value="查询" class="submit" name="check" id="check" />
+                            </div>
                         </div>
                     </div><br>
 
@@ -38,7 +40,7 @@
                             <table class="table table-hover" id="prescDetail">
                                 <thead>
                                 <tr>
-                                    <th><input type="checkbox" style="width: 30px"></th>
+                                    <th><input type="checkbox" name="selectAll" style="width: 30px"></th>
                                     <th>药品名称</th>
                                     <th>单价</th>
                                     <th>数量</th>
@@ -49,7 +51,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <td><input type="checkbox" style="width: 30px"></td>
+                                <td><input type="checkbox" name="choice" style="width: 30px"></td>
                                 <td>头孢</td>
                                 <td>12</td>
                                 <td>3</td>
@@ -61,14 +63,52 @@
                             </table>
                         </div>
                     </div>
-                    <div class="form-submit">
-                        <input type="submit" value="发药" class="submit" name="submit" id="submit" />
+                    <div class="form-submit" id = "submitForm">
+                        <input type="button" value="发药" class="submit" name="submit" id="submit" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    var
+        form = $('#drug-form'),
+        choices = form.find('[name=choice]'),
+        selectAll = form.find('[name=selectAll]');
+
+    // 重置初始化状态：
+    form.find('*').show().off();
+    form.find(':checkbox').prop('checked', false).off();
+    // 拦截form提交事件
+    form.off().submit(function(e){
+        e.preventDefault();
+        alert(form.serialize());
+    })
+
+    function setAll() {
+        if(selectAll.prop('checked')) {
+            choices.prop('checked', true);
+        } else {
+            choices.prop('checked', false);
+        }
+    }
+
+    selectAll.change(setAll);
+
+</script>
+
+
+<script>
+    var submit = $('#submit');
+    submit.click(function () {
+        alert("发药成功！")
+    })
+</script>
+
+
+
 
 </body>
 </html>

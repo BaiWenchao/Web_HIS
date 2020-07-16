@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>退号</title>
 
     <!-- Main css -->
     <link rel="stylesheet" href="../css_js/regist/css/style.css">
@@ -28,7 +28,9 @@
                             <input type="text" name="name" id="name" required/>
                         </div>
                         <div class="form-group">
-                            <br><br><button id="check">查询</button>
+                            <div class="form-submit">
+                                <input type="button" value="查询" class="submit" name="submit" id="check" />
+                            </div>
                         </div>
                     </div><br>
 
@@ -64,20 +66,35 @@
                                 <td>2020/7/16</td>
                                 <td>上</td>
                                 <td>心血管内科</td>
-                                <td>已挂号</td>
+                                <td id="status">已挂号</td>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
                     <div class="form-submit">
-                        <input type="submit" value="退号" class="submit" name="submit" id="submit" />
+                        <input type="button" value="退号" class="submit" name="submit" id="submit" />
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    var
+        status = document.getElementById("status").innerHTML,
+        submit = $("#submit");
+
+    submit.click(function () {
+        if(status === '已挂号') {
+            alert('退号成功！')
+        } else {
+            alert('无法退号！')
+        }
+    })
+</script>
 
 </body>
 </html>

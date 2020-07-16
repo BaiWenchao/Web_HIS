@@ -1,21 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
 /* BASIC */
 
 html {
     background-color: #56baed;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-}
-
-a {
-    color: #92badd;
-    display:inline-block;
-    text-decoration: none;
-    font-weight: 400;
 }
 
 h2 {
@@ -56,17 +42,6 @@ h2 {
     text-align: center;
 }
 
-#formFooter {
-    background-color: #f6f6f6;
-    border-top: 1px solid #dce8f1;
-    padding: 25px;
-    text-align: center;
-    -webkit-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-}
-
-
-
 /* TABS */
 
 h2.inactive {
@@ -75,7 +50,6 @@ h2.inactive {
 
 h2.active {
     color: #0d0d0d;
-    border-bottom: 2px solid #5fbae9;
 }
 
 

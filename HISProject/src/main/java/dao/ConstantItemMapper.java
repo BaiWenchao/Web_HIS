@@ -1,6 +1,5 @@
 package dao;
 
-public interface ConstantItem {
-    String getUserId(int id);
-    String getUserDept(int id);
+public interface ConstantItemMapper {
+    String getConstantItemById(int id);
 }

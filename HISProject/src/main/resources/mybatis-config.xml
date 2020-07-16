@@ -30,5 +30,9 @@
     </environments>
     <mappers>
         <mapper resource="mybatis-mapping/PatientMapper.xml"/>
+        <mapper resource="mybatis-mapping/UserMapper.xml"/>
+        <mapper resource="mybatis-mapping/UserCategoryMapper.xml"/>
+        <mapper resource="mybatis-mapping/ConstantItemMapper.xml"/>
+        <mapper resource="mybatis-mapping/RegLevelMapper.xml"/>
     </mappers>
 </configuration>

@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>看诊</title>
     <link rel="stylesheet" href="../css_js/doc/tabpagecss/bootstrap.css" type="text/css">
     <script src="../css_js/doc/tabpagecss/bootstrap.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="../css_js/doc/tablecss/util.css">
-    <link rel="stylesheet" type="text/css" href="../css_js/doc/tablecss/main.css">
+    <script src="../css_js/regist/js/jquery.js" type="text/javascript"></script>
 
     <link rel="stylesheet" href="../css_js/regist/css/style.css">
 </head>
@@ -136,16 +135,23 @@
             </div>
 
             <div class="form-submit">
-                <input type="submit" value="添加疾病" class="submit" name="add" id="add" />
-                <input type="submit" value="删除疾病" class="submit" name="delete" id="delete" />
-                <input type="submit" value="提交表单" class="submit" name="submit" id="submit" />
+                <input type="button" value="添加疾病" class="submit" name="add" id="add" />
+                <input type="button" value="删除疾病" class="submit" name="delete" id="delete" />
+                <input type="button" value="提交表单" class="submit" name="submit" id="submit" />
             </div>
         </form>
     </div>
 </div>
 </div>
 
-</div>
+
+<script language="javascript">
+    var add = $('#add');
+    add.click(function () {
+        window.open ('pop-up/addDisease.html', '增方', 'height=500, width=1000, top=300,left=300')
+    })
+</script>
+
 
 </body>
 </html>

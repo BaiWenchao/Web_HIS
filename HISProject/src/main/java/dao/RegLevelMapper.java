@@ -1,4 +1,7 @@
 package dao;
 
-public interface RegLevelMap {
+import entity.RegLevel;
+
+public interface RegLevelMapper {
+    RegLevel getRegLevelById(int id);
 }
