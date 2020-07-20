@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.InvoiceMapper">
+    <insert id="insertInvoice" parameterType="invoice">
+        insert into Invoice (id, invoiceNum, invoiceAmt, invoiceRealGet, invoiceBalance, invoiceStatus, invoiceTime, operatorId, regId)
+        values (#{id}, #{invoiceNum}, #{invoiceAmt}, #{invoiceRealGet}, #{invoiceBalance}, #{invoiceStatus}, #{invoiceTime}, #{operatorId}, #{regId});
+    </insert>
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--MyBatis核心配置文件-->
+<configuration>
+
+    <!--引入外部配置文件-->
+    <properties resource="db.properties"/>
+
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+
+    <!--包说明-->
+    <typeAliases>
+        <package name="entity"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mybatis-mapping/UserMapper.xml"/>
+        <mapper resource="mybatis-mapping/UserCategoryMapper.xml"/>
+        <mapper resource="mybatis-mapping/PatientMapper.xml"/>
+        <mapper resource="mybatis-mapping/ConstantItemMapper.xml"/>
+        <mapper resource="mybatis-mapping/RegLevelMapper.xml"/>
+        <mapper resource="mybatis-mapping/ConstantTypeMapper.xml"/>
+        <mapper resource="mybatis-mapping/DepartmentMapper.xml"/>
+        <mapper resource="mybatis-mapping/RegRecordMapper.xml"/>
+        <mapper resource="mybatis-mapping/DiseaseMapper.xml"/>
+        <mapper resource="mybatis-mapping/RegInfoMapper.xml"/>
+        <mapper resource="mybatis-mapping/DiagnoseMapper.xml"/>
+        <mapper resource="mybatis-mapping/DrugTemplateMapper.xml"/>
+        <mapper resource="mybatis-mapping/DrugTemplateDetailMapper.xml"/>
+        <mapper resource="mybatis-mapping/ChargeInfoMapper.xml"/>
+        <mapper resource="mybatis-mapping/InvoiceMapper.xml"/>
+    </mappers>
+</configuration>

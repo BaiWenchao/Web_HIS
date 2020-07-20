@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.RegLevelMapper">
+    <select id="getRegLevelList" resultType="String">
+        select RegName from RegLevel;
+    </select>
+
+    <select id="getRegLevelId" resultType="int" parameterType="String">
+        select id from RegLevel where regName = #{name};
+    </select>
+
+    <select id="getRegLimit" parameterType="int" resultType="int">
+        select regLimit from RegLevel where id = #{id};
+    </select>
+
+    <select id="getFee" resultType="int">
+        select regFee from RegLevel;
+    </select>
+</mapper>

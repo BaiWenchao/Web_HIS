@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.DepartmentMapper">
+    <select id="getDocDepts" resultType="String" parameterType="int">
+        select deptName from department
+        where department.id in
+        (select deptId from users where users.userCate = #{userCate});
+    </select>
+
+    <select id="getDeptId" resultType="int" parameterType="String">
+        select id from department where department.deptName = #{name};
+    </select>
+</mapper>

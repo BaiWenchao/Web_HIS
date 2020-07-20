@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.PatientMapper">
+    <select id="getPatientByName" parameterType="String" resultType="patient">
+        select * from patient where PatientName = #{name};
+    </select>
+
+    <insert id="insertPatient">
+        insert into Patient (ID, PatientName, PatientGender, IDNumber, Birthday, Address) values
+        (#{id}, #{name}, #{gender}, #{idNumber}, #{birthday}, #{address});
+    </insert>
+
+    <select id="getPatientById" parameterType="int" resultType="patient">
+        select * from patient where id = #{id};
+    </select>
+
+</mapper>

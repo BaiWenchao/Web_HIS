@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.RegRecordMapper">
+    <select id="getRegCount" resultType="int">
+        select count(*) from regRecord where doctorId = #{id} and regDate = #{date};
+    </select>
+
+    <insert id="insertRegRecord" parameterType="regRecord">
+        insert into RegRecord (ID, PatientID, PatientName, PatientGender, PatientAge, RegDate, RegNoon, DeptID, DoctorID, RegLevelID, CalClassID, NeedBook, RegistrarID, RegStatus, feeType) values
+        (#{id}, #{patientId}, #{patientName}, #{patientGender}, #{patientAge}, #{regDate}, #{regNoon}, #{deptId}, #{doctorId}, #{regLevelId}, #{calClassId}, #{needBook}, #{registrarId}, #{regStatus}, #{feeType});
+    </insert>
+
+    <select id="getRegRecords_fore" resultType="regRecord">
+        select * from regRecord where doctorId = #{id} and regDate = #{date} and regStatus = 1;
+    </select>
+
+    <select id="getRegRecords_after" resultType="regRecord">
+        select * from regRecord where doctorId = #{id} and regDate = #{date} and regStatus = 2;
+    </select>
+
+    <select id="getRegRecords" resultType="regRecord">
+        select * from regRecord where doctorId = #{id} and regDate = #{date};
+    </select>
+
+    <update id="updateRegRecord" parameterType="int">
+        update regRecord set regStatus = #{status} where id = #{regId};
+    </update>
+
+    <select id="getPatientId" parameterType="int" resultType="int">
+        select patientId from regRecord where id = #{id};
+    </select>
+
+    <select id="getRegRecord" parameterType="int" resultType="regRecord">
+        select * from regRecord where id = #{id};
+    </select>
+</mapper>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0"
+         metadata-complete="true">
+
+  <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegGetPatientInfo</servlet-name>
+    <servlet-class>servlet.RegGetPatientInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegGetPatientInfo</servlet-name>
+    <url-pattern>/RegGetPatientInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegGetDoctorInfo</servlet-name>
+    <servlet-class>servlet.RegGetDoctorInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegGetDoctorInfo</servlet-name>
+    <url-pattern>/RegGetDoctorInfo</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>RegPostInfo</servlet-name>
+    <servlet-class>servlet.RegPostInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegPostInfo</servlet-name>
+    <url-pattern>/RegPostInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegFee</servlet-name>
+    <servlet-class>servlet.RegFeeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegFee</servlet-name>
+    <url-pattern>/RegFee</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>DocGetPatient</servlet-name>
+    <servlet-class>servlet.DocGetPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocGetPatient</servlet-name>
+    <url-pattern>/DocGetPatient</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DocGetDisease</servlet-name>
+    <servlet-class>servlet.DocGetDiseaseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocGetDisease</servlet-name>
+    <url-pattern>/DocGetDisease</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DocPostInfo</servlet-name>
+    <servlet-class>servlet.DocPostInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DocPostInfo</servlet-name>
+    <url-pattern>/DocPostInfo</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>DrugGetTemplate</servlet-name>
+    <servlet-class>servlet.DrugGetTemplateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DrugGetTemplate</servlet-name>
+    <url-pattern>/DrugGetTemplate</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>DrugGetDetail</servlet-name>
+    <servlet-class>servlet.DrugGetDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DrugGetDetail</servlet-name>
+    <url-pattern>/DrugGetDetail</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>ChargeGetPatient</servlet-name>
+    <servlet-class>servlet.ChargeGetPatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChargeGetPatient</servlet-name>
+    <url-pattern>/ChargeGetPatient</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ChargeGetPay</servlet-name>
+    <servlet-class>servlet.ChargeGetPayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChargeGetPay</servlet-name>
+    <url-pattern>/ChargeGetPay</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>DrugPostInfo</servlet-name>
+    <servlet-class>servlet.DrugPostInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DrugPostInfo</servlet-name>
+    <url-pattern>/DrugPostInfo</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ChargePostInvoice</servlet-name>
+    <servlet-class>servlet.ChargePostInvoiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChargePostInvoice</servlet-name>
+    <url-pattern>/ChargePostInvoice</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>ChangeRegStatus</servlet-name>
+    <servlet-class>servlet.ChangeRegStatusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangeRegStatus</servlet-name>
+    <url-pattern>/ChangeRegStatus</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ReReg</servlet-name>
+    <servlet-class>servlet.ReRegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReReg</servlet-name>
+    <url-pattern>/ReReg</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>PharmacyGetInfo</servlet-name>
+    <servlet-class>servlet.PharmacyGetInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PharmacyGetInfo</servlet-name>
+    <url-pattern>/PharmacyGetInfo</url-pattern>
+  </servlet-mapping>
+
+
+  
+  
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>filter.CharacterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/adminPage.jsp</url-pattern>
+    <url-pattern>/doctorPage.jsp</url-pattern>
+    <url-pattern>/pharmacyPage.jsp</url-pattern>
+    <url-pattern>/registrarPage.jsp</url-pattern>
+  </filter-mapping>
+
+</web-app>

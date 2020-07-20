@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.ChargeInfoMapper">
+    <select id="getChargeInfoByRegId" resultType="chargeInfo" parameterType="int">
+        select * from chargeInfo where regId = #{id};
+    </select>
+
+    <insert id="insertChargeInfo">
+        insert into chargeInfo (id, regId, patientName, itemName, itemPrice, amount, openTime, drugStatus) values
+        (#{id}, #{regId}, #{patientName}, #{itemName}, #{itemPrice}, #{amount}, #{openTime}, #{drugStatus});
+    </insert>
+
+    <select id="getDeliveredInfo" resultType="chargeInfo" parameterType="int">
+        select * from chargeInfo where regId = #{id} and drugStatus = '已缴费';
+    </select>
+</mapper>

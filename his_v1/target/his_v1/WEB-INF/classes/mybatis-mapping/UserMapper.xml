@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--一个namespace对应一个接口-->
+<mapper namespace="dao.UserMapper">
+    <select id="getUserByUserName" resultType="user" parameterType="String">
+        select * from users where userName = #{userName};
+    </select>
+
+    <select id="getUserName" resultType="String">
+        select realName from users where deptId = #{dept} and regLevel = #{regLevel} and userCate = 4;
+    </select>
+
+    <select id="getUserByRealName" resultType="user" parameterType="String">
+        select  * from users where realName = #{realName};
+    </select>
+
+    <select id="getUserId" resultType="int" parameterType="String">
+        select id from users where realName = #{realName};
+    </select>
+</mapper>
