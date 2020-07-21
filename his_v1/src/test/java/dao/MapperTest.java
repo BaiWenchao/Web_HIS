@@ -565,7 +565,23 @@ public class MapperTest {
 
 
     @Test
-    public void getPatientById() {
+    public void getFee() {
+        List<Integer> idxList = new ArrayList<>();
+        idxList.add(3);
+        idxList.add(5);
 
+        float sum = 0;
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+        try {
+            ChargeInfoMapper chargeInfoMapper = sqlSession.getMapper(ChargeInfoMapper.class);
+            for (int idx : idxList) {
+                sum += chargeInfoMapper.getFee(idx);
+            }
+        } catch (Exception e) {
+            System.out.println("failure");
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
     }
 }

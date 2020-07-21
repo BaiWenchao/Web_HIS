@@ -72,7 +72,6 @@
                     </div>
 
                     <div class="form-submit">
-                        <input type="button" value="刷新" class="fresh" name="fresh" id="fresh"/>
                         <input type="button" value="收费结算" class="submit" name="submit" id="submit" />
                     </div>
                 </form>
@@ -81,39 +80,11 @@
     </div>
 </div>
 
-<input type="hidden" id="invoiceNum"/>
-<input type="hidden" id="invoiceAmt"/>
-<input type="hidden" id="invoiceRealGet"/>
-<input type="hidden" id="invoiceBalance"/>
+<input type="hidden" id="idxArr"/>
+<input type="hidden" id="sum"/>
 
 
-
-
-<script>
-    $("#fresh").click(function () {
-        var info = {
-            invoiceNum: $("#invoiceNum").val(),
-            invoiceAmt: $("#invoiceAmt").val(),
-            invoiceRealGet: $("#invoiceRealDet").val(),
-            invoiceBalance: $("#invoiceBalance").val(),
-            regId: $("#regId").val()
-        }
-        $.ajax({
-            type: "post",
-            url: "${pageContext.request.contextPath}/ChargePostInvoice",
-            dataType: "json",
-            data: info
-        })
-    })
-</script>
-
-<%
-    ChargePostService chargePostService = new ChargePostService();
-    chargePostService.insertInvoice(1001, 20, 30, 10, 1);
-%>
-
-
-
+<%--复选框全选--%>
 <script>
     $(document).ready(function () {
         $('input[name="selectAll"]').change(function () {
@@ -132,15 +103,46 @@
 
 <%--计算总金额，弹出弹窗--%>
 <script language="javascript">
-    var add = $('#submit');
-    add.click(function () {
-        window.open ('pop-up/invoice.jsp', '发票', 'height=500, width=1000, top=300,left=300')
+
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var idxArr = new Array();
+
+            $("input:checkbox[name=choice]:checked").each(function () {
+                let tmp = $(this).attr("id");
+                idxArr.push(tmp);
+            });
+
+            $("#idxArr").val(JSON.stringify(idxArr));
+
+            $.ajax({
+                type: "get",
+                url: "${pageContext.request.contextPath}/ChargeCalPay",
+                dataType: "json",
+                data: {data: $("#idxArr").val()},
+                success: function (msg) {
+                    $("#sum").val(msg);
+                }
+            })
+
+            window.open('pop-up/invoice.jsp', '发票', 'height=500, width=1150, top=300,left=300')
+
+            // 清空列表：
+            var rows = document.getElementById("chargeInfo").rows;
+            for (let i=rows.length-1; i>=0; i--) {
+                rows[i].remove();
+            }
+
+        })
     })
+
 </script>
+
+
+
 
 <%--点击查询，获取信息--%>
 <script>
-
    $("#check").click(function () {
 
         var rId = $("#regId").val();
@@ -166,8 +168,6 @@
                for (let i=rows.length-1; i>=0; i--) {
                    rows[i].remove();
                }
-
-
                for (let i=0; i<msg.length; i++) {
                    $('#chargeInfo').append(
                        '<tr>' +

@@ -17,8 +17,6 @@ public class ChargeGetPayServlet extends HttpServlet {
         ChargeGetService chargeGetService = new ChargeGetService();
         String json = chargeGetService.getChargeInfo(id);
 
-        System.out.println(json);
-
         resp.getWriter().print(json);
     }
 

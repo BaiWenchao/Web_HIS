@@ -177,6 +177,24 @@
     <url-pattern>/PharmacyGetInfo</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ChargeCalPay</servlet-name>
+    <servlet-class>servlet.ChargeCalPayServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChargeCalPay</servlet-name>
+    <url-pattern>/ChargeCalPay</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PharmacyPostInfo</servlet-name>
+    <servlet-class>servlet.PharmacyPostInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PharmacyPostInfo</servlet-name>
+    <url-pattern>/PharmacyPostInfo</url-pattern>
+  </servlet-mapping>
+
 
   
   

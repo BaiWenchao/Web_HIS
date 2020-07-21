@@ -86,6 +86,8 @@
     </div>
 </div>
 
+<input type="hidden" id="arr"/>
+
 
 
 <script type="text/javascript">
@@ -96,7 +98,9 @@
         $("#invoiceNum").val(tmp);
         $("#regNum").val(window.opener.document.all.regId.value);
         $("#name").val(window.opener.document.all.nameConfirm.value);
-        $("#get").val(20);
+        $("#get").val(window.opener.document.all.sum.value);
+
+        $("#arr").val(window.opener.document.all.idxArr.value);
     })
 
     $("#realget").change(function () {
@@ -110,6 +114,20 @@
 <script>
     $("#submit").click(function () {
         $.ajax({
+
+            type:"post",
+            url: "${pageContext.request.contextPath}/ChargePostInvoice",
+            data: {
+                invoiceNum: $("#invoiceNum").val(),
+                invoiceAmt: $("#get").val(),
+                invoiceRealGet: $("#realget").val(),
+                invoiceBalance: $("#balance").val(),
+                regId: $("#regNum").val(),
+                arr: $("#arr").val()
+            },
+            success: function () {
+                alert("收费成功！");
+            }
         })
     })
 </script>

@@ -1,6 +1,8 @@
 package service;
 
+import dao.ChargeInfoMapper;
 import dao.InvoiceMapper;
+import entity.ChargeInfo;
 import entity.Invoice;
 import org.apache.ibatis.session.SqlSession;
 import util.MyBatisUtil;
@@ -21,6 +23,24 @@ public class ChargePostService {
 
             if (res>0) {
                 System.out.println("success!");
+                sqlSession.commit();
+            }
+        } catch (Exception e) {
+            System.out.println("failure");
+            sqlSession.rollback();
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+    }
+
+    public void updateStatus(int idx, String status) {
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+        try {
+            ChargeInfoMapper chargeInfoMapper = sqlSession.getMapper(ChargeInfoMapper.class);
+            int res = chargeInfoMapper.updateStatus(status, idx);
+            if (res > 0) {
+                System.out.println("success");
                 sqlSession.commit();
             }
         } catch (Exception e) {

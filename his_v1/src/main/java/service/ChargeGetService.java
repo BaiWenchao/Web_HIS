@@ -48,4 +48,23 @@ public class ChargeGetService {
         return json;
     }
 
+
+    public float calFee(List<Integer> idxArr) {
+        float sum = 0;
+        SqlSession sqlSession = MyBatisUtil.getSqlSession();
+        try {
+            ChargeInfoMapper chargeInfoMapper = sqlSession.getMapper(ChargeInfoMapper.class);
+            for (int idx : idxArr) {
+                sum += chargeInfoMapper.getFee(idx);
+            }
+        } catch (Exception e) {
+            System.out.println("failure");
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+
+        return sum;
+    }
+
 }

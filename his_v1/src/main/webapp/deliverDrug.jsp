@@ -95,7 +95,7 @@
                 for (let i = 0; i < msg.length; i++) {
                     $('#deliverDrugs').append(
                         '<tr>' +
-                        '<th>' + '<input type="checkbox" name="choice" style="width: 30px">'+'</th>'+
+                        '<th>' + '<input type="checkbox" name="choice" style="width: 30px" id="'+msg[i].id+'">'+'</th>'+
                         '<td>' + msg[i].itemName + '</td>' +
                         '<td>' + msg[i].itemPrice + '</td>' +
                         '<td>' + msg[i].amount + '</td>' +
@@ -109,15 +109,30 @@
 </script>
 
 <script>
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            var idxArr = new Array();
 
-    $("#submit").click(function () {
-        alert("发药成功！")
+            $("input:checkbox[name=choice]:checked").each(function () {
+                let tmp = $(this).attr("id");
+                idxArr.push(tmp);
+            });
 
-        var rows = document.getElementById("deliverDrugs").rows;
+            $.ajax({
+                type: "post",
+                url: "${pageContext.request.contextPath}/PharmacyPostInfo",
+                dataType: "json",
+                data: {data: JSON.stringify(idxArr)}
+            });
 
-        for (let i=rows.length-1; i>=0; i--) {
-            rows[i].remove();
-        }
+            var rows = document.getElementById("deliverDrugs").rows;
+            for (let i=rows.length-1; i>=0; i--) {
+                rows[i].remove();
+            }
+
+            alert("发药成功！");
+
+        })
     })
 
 </script>

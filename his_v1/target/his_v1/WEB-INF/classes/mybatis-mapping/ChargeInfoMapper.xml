@@ -5,7 +5,7 @@
 <!--一个namespace对应一个接口-->
 <mapper namespace="dao.ChargeInfoMapper">
     <select id="getChargeInfoByRegId" resultType="chargeInfo" parameterType="int">
-        select * from chargeInfo where regId = #{id};
+        select * from chargeInfo where regId = #{id} and drugStatus = '已开立';
     </select>
 
     <insert id="insertChargeInfo">
@@ -16,4 +16,13 @@
     <select id="getDeliveredInfo" resultType="chargeInfo" parameterType="int">
         select * from chargeInfo where regId = #{id} and drugStatus = '已缴费';
     </select>
+
+    <select id="getFee" parameterType="int" resultType="float">
+        select itemPrice * amount from chargeInfo where id = #{id};
+    </select>
+
+    <update id="updateStatus">
+        update chargeInfo set drugStatus = #{status} where id = #{regId};
+    </update>
+
 </mapper>
