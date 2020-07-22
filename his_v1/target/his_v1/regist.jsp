@@ -189,7 +189,6 @@
 <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
 
-
 <%--验证输入合法性：--%>
 <script type="text/javascript">
     function validform() {

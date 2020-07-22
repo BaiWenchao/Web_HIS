@@ -105,6 +105,11 @@
 
     $("#realget").change(function () {
         var val = $("#realget").val() - $("#get").val();
+
+        if (val < 0) {
+            alert("找零必须为非负数！")
+        }
+
         $("#balance").val(val);
     })
 </script>

@@ -102,9 +102,7 @@
             dataType: "json",
             data: {regId: rId},
             success: function (msg) {
-
                 var status = (msg.regStatus===1) ? '未诊' : '非未诊';
-
                 $('#deRegist').append(
                     '<tr>' +
                     '<td>' + msg.id + '</td>' +

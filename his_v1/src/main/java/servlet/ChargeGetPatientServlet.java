@@ -1,7 +1,5 @@
 package servlet;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import org.w3c.dom.ls.LSOutput;
 import service.ChargeGetService;
 
 import javax.servlet.ServletException;
@@ -17,9 +15,7 @@ public class ChargeGetPatientServlet extends HttpServlet {
         int id = Integer.parseInt(req.getParameter("regId"));
         ChargeGetService chargeGetService = new ChargeGetService();
         String json = chargeGetService.getPatient(id);
-
         resp.getWriter().print(json);
-
     }
 
     @Override
